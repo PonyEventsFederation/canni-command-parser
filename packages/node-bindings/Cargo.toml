@@ -1,0 +1,13 @@
+[package]
+name = "node-bindings"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+canni-command-parser = { path = "../canni-command-parser" }
+neon = { git = "https://github.com/neon-bindings/neon.git", rev = "910a5480c1ac748b5fa8ff3da531241eaf106388" }
+
+[lib]
+crate-type = ["cdylib"]

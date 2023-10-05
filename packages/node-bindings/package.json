@@ -1,0 +1,14 @@
+{
+	"name": "canni-command-parser",
+	"private": true,
+	"scripts": {
+		"build:debug": "pnpm run build:ts && pnpm run build:rs",
+		"build:release": "pnpm run build:ts && pnpm run build:rs -r",
+		"build:rs": "node build-and-cp-artifact.mjs",
+		"build:ts": "tsc"
+	},
+	"devDependencies": {
+		"@types/node": "^20.8.2",
+		"typescript": "^5.2.2"
+	}
+}

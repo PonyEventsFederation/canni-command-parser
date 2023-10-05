@@ -1,0 +1,3 @@
+node_modules
+/target
+/packages/node-bindings/build
