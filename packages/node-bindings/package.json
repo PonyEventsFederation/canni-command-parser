@@ -4,11 +4,15 @@
 	"scripts": {
 		"build:debug": "pnpm run build:ts && pnpm run build:rs",
 		"build:release": "pnpm run build:ts && pnpm run build:rs -r",
-		"build:rs": "node build-and-cp-artifact.mjs",
-		"build:ts": "tsc"
+		"build:rs": "node scripts/build-and-cp-artifact.mjs",
+		"build:ts": "tsc",
+		"postinstall": "node scripts/postinstall.mjs || pnpm run build:release"
+	},
+	"noPostinstall": true,
+	"dependencies": {
+		"typescript": "^5.2.2"
 	},
 	"devDependencies": {
-		"@types/node": "^20.8.2",
-		"typescript": "^5.2.2"
+		"@types/node": "^20.8.2"
 	}
 }
