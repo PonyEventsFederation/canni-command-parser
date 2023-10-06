@@ -1,6 +1,14 @@
 {
+	"name": "canni-command-parser",
 	"private": true,
-	"devDependencies": {
-		"@types/node": "^20.8.2"
+	"main": "./packages/node-bindings/build/index.mjs",
+	"noPostinstall": true,
+	"scripts": {
+		"postinstall": "node scripts/postinstall.mjs || pnpm run real-postinstall",
+		"real-postinstall": "cd packages/node-bindings && pnpm run build:release"
+	},
+	"dependencies": {
+		"@types/node": "^20.8.2",
+		"typescript": "^5.2.2"
 	}
 }
