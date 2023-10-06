@@ -2,7 +2,9 @@
 	"name": "canni-command-parser",
 	"private": true,
 	"main": "./packages/node-bindings/build/index.mjs",
-	"scripts": {},
+	"scripts": {
+		"postinstall": "cd packages/node-bindings && pnpm run build:release"
+	},
 	"dependencies": {
 		"@types/node": "^20.8.2",
 		"typescript": "^5.2.2"
