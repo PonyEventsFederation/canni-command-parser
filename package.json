@@ -3,7 +3,7 @@
 	"private": true,
 	"main": "./packages/node-bindings/build/index.mjs",
 	"scripts": {
-		"postinstall": "node testing.mjs"
+		"postinstall": "node script/postinstall.mjs"
 	},
 	"dependencies": {
 		"@types/node": "^20.8.2",
