@@ -9,10 +9,12 @@ pub fn random(mut cx: FunctionContext) -> JsResult<JsNumber> {
 	let precise = cx.argument::<JsBoolean>(2)?.value(cx);
 
 	let num = if precise {
-		OsRng.gen_range(min..=max)
+		// precise = floats
+		OsRng.gen_range(min..max)
 	} else {
-		let (min, max) = (min as u32, max as u32);
-		OsRng.gen_range(min..max) as f64
+		// ints
+		let (min, max) = (min as i32, max as i32);
+		OsRng.gen_range(min..=max) as f64
 	};
 
 	Ok(cx.number(num))
