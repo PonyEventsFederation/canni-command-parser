@@ -1,6 +1,6 @@
 # Canni command parser
 
-A command parser and other utilities shared by the bots of Galacon, so that they get identical message parsing behaviour among other things. **Currently experimental and not actually used.**
+A command parser and other utilities shared by the bots of Galacon, so that they get identical message parsing behaviour among other things. **Currently containing minimal logic and not actually used for what the name may imply.**
 
 ## Building
 
