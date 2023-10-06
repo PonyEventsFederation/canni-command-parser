@@ -8,6 +8,7 @@ license.workspace = true
 [dependencies]
 canni-command-parser = { path = "../canni-command-parser" }
 neon = { git = "https://github.com/neon-bindings/neon.git", rev = "910a5480c1ac748b5fa8ff3da531241eaf106388" }
+rand = { version = "0.8.5", features = ["nightly"] }
 
 [lib]
 crate-type = ["cdylib"]
